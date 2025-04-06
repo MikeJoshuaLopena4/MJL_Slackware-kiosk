@@ -43,5 +43,19 @@ ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
 chmod +x /usr/bin/google-chrome-stable
 
 # Try launching it
-echo "INSTALLED..."
+echo "Google Chrome Installed"
+
+# Step: Setup Kiosk Environment in /home/kiosk
+echo "Preparing kiosk environment..."
+
+mkdir /home kiosk
+cd /home/kiosk || exit
+
+# Clone the JOT85/kiosk repo
+echo "Downloading kiosk window manager..."
+wget https://github.com/JOT85/kiosk-wm/archive/refs/heads/master.zip
+unzip master.zip
+cd kiosk-wm-master || exit
+chmod +x kiosk-wm-run.sh kiosk-wm
+
 
