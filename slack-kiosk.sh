@@ -58,4 +58,5 @@ unzip master.zip
 cd kiosk-wm-master || exit
 chmod +x kiosk-wm-run.sh kiosk-wm
 
+echo "PLease make additional configuration"
 
